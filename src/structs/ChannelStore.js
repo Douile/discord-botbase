@@ -2,7 +2,7 @@ const { Collection } = require('discord.js');
 const SaveInterface = require('./save/SaveInterface.js');
 const SaveJSON = require('./save/SaveJSON.js');
 
-class UpdateCache extends Collection {
+class ChannelStore extends Collection {
   constructor(filename) {
     super();
     this._saveLock = false;
@@ -77,26 +77,6 @@ class UpdateCache extends Collection {
       result = values.next();
     }
   }
-
-  *tickIterable(tickLimit) {
-    const values = Array.from(this.flatValues()),
-    size = values.length,
-    valueIterator = values.values(); // Maybe a better way to do this
-    let tickSize = 1;
-    if (size > tickLimit) tickSize = Math.ceil(size/tickLimit);
-    let tickStep = 1;
-    if (size < tickLimit) tickStep = Math.floor(tickLimit/size);
-    for (let i=0;i<tickLimit;i++) {
-      let result = [];
-      if (i % tickStep === 0) {
-        for (let j=0;j<tickSize;j++) {
-          let v = valueIterator.next();
-          if (!v.done && v.value) result.push(v.value);
-        }
-      }
-      yield result;
-    }
-  }
 }
 
-module.exports = UpdateCache;
+module.exports = ChannelStore;

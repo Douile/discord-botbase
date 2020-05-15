@@ -34,12 +34,6 @@ const setupAndStart = function(key, args) {
       case '--admin':
       config.adminFlag = args[++i];
       break;
-      case '--tick-count':
-      config.tickCount = Number(args[++i]);
-      break;
-      case '--tick-time':
-      config.tickTime = Number(args[++i]);
-      break;
     }
   }
 

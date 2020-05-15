@@ -3,5 +3,5 @@ node_modules/
 
 # Project
 trigger-run.js
-_save.json
+_channel_store.json
 start.sh

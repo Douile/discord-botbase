@@ -1,33 +1,20 @@
 {
-  "name": "discord-gamestatus",
-  "version": "1.5.0",
-  "description": "Monitor game servers via discord",
+  "name": "discord-bot",
+  "version": "1.0.0",
+  "description": "",
   "main": "index.js",
   "author": "Douile",
-  "keywords": [
-    "discord",
-    "discord-bot",
-    "discord-gamestatus",
-    "gamestatus",
-    "monitoring",
-    "game-server-monitoring"
-  ],
+  "keywords": [],
   "scripts": {
     "test": "npm run lint",
     "lint": "npx eslint src *.js"
   },
-  "bin": "./bin/cli.js",
   "license": "GPL-3.0",
-  "bugs": {
-    "url": "https://github.com/Douile/discord-gamestatus/issues"
-  },
-  "homepage": "https://github.com/Douile/discord-gamestatus",
   "engines": {
     "node": ">=10.0.0"
   },
   "dependencies": {
-    "discord.js": "^11.6.4",
-    "gamedig": "github:douile/node-gamedig#unessential-requests"
+    "discord.js": "^11.6.4"
   },
   "devDependencies": {
     "eslint": "^6.8.0"

@@ -2,7 +2,6 @@ const { RichEmbed } = require('discord.js');
 
 const Package = require('../../package');
 const DiscordPackage = require('discord.js/package');
-const GameDigPackage = require('gamedig/package');
 
 const call = async function(message) {
   const client = message.client;
@@ -15,8 +14,7 @@ const call = async function(message) {
     Working in ${client.guilds.size} guilds\n\
     **Dependencies**\n\
     [NodeJS v ${process.version}](https://nodejs.org)\n\
-    [${DiscordPackage.name} v${DiscordPackage.version}](${DiscordPackage.homepage})\n\
-    [${GameDigPackage.name} v${GameDigPackage.version}](${GameDigPackage.homepage})`,
+    [${DiscordPackage.name} v${DiscordPackage.version}](${DiscordPackage.homepage})`,
     timestamp: Date.now()
   }))
 }
